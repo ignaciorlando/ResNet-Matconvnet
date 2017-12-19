@@ -7,6 +7,8 @@ function [imdb] = setup_imdb_origa( dataset_folder, varargin )
     % open filenames and labels
     load(fullfile(dataset_folder, 'labels.mat'));
     
+    labels = double(labels) + 1;
+    
     % number of the data sets
     imdb.sets = {'train', 'val'};
     % setup image folder

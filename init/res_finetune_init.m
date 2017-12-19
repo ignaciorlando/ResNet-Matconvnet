@@ -43,8 +43,6 @@ lName = net.layers(end).name;
 net.addLayer('softmax', dagnn.SoftMax(), lName, 'softmax');  
 net.addLayer('loss', dagnn.Loss('loss', 'log'), {'softmax', 'label'}, 'loss');
 net.addLayer('error', dagnn.Loss('loss', 'classerror'), {'softmax','label'}, 'error') ;
-net.addLayer('error5', dagnn.Loss('loss', 'topkerror', 'opts', {'topK', 5}), ...
-  {'softmax','label'}, 'error5') ;
 
 net.meta.augmentation.rgbVariance = zeros(0,3) ;
 net.meta.augmentation.transformation = 'stretch' ;

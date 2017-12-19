@@ -27,8 +27,8 @@ opts.batchSize = 32;
 opts.checkpointFn = [];
 [opts, varargin] = vl_argparse(opts, varargin) ;
 
-opts.train.learningRate = [0.05*ones(1,10) 0.01*ones(1,10) 0.001*ones(1,10)...
-    0.0001*ones(1,55)]; 
+opts.train.learningRate = [0*ones(1,10) 0*ones(1,10) 0*ones(1,10) 0.000001*ones(1,55)]; 
+%opts.train.learningRate = [0.05*ones(1,10) 0.01*ones(1,10) 0.001*ones(1,10) 0.0001*ones(1,55)]; 
 opts.train.momentum = 0.9;
 opts.train.gpus = [];
 opts.train = vl_argparse(opts.train, varargin) ;
